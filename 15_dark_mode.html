@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeNest Dark Mode</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: white;
+            color: black;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .dark {
+            background: black;
+            color: white;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CodeNest</h1>
+
+    <h2>Coding Bootcamp and Practice Labs</h2>
+
+    <p>Switch between Light and Dark Mode</p>
+
+    <button onclick="setTheme('light')">Light Mode</button>
+
+    <button onclick="setTheme('dark')">Dark Mode</button>
+
+    <p id="status"></p>
+
+    <script>
+
+        function setTheme(theme) {
+
+            if (theme == "dark") {
+                document.body.classList.add("dark");
+
+                document.getElementById("status").innerHTML =
+                "Dark Mode Enabled";
+            }
+
+            else {
+                document.body.classList.remove("dark");
+
+                document.getElementById("status").innerHTML =
+                "Light Mode Enabled";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
